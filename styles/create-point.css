@@ -65,7 +65,7 @@ form .field-group {
 }
 
 form input, form select {
-    background-color: #F0F0F5;
+    background-color: var(--bg-color);
     border: 0;
     padding: 16px 24px;
     font-size: 16px;
@@ -135,6 +135,11 @@ form button:hover {
 }
 
 .itens-grid li.selected {
-  background:#E1FAEC;
-  border: 2px solid #34CB79;
+    background: #E1FAEC;
+    border: 2px solid #34CB79;
+}
+
+.itens-grid li img, .itens-grid li span {
+    pointer-events: none;
+    /* desabilita os itens para não receber cliques */
 }
