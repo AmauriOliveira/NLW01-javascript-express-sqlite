@@ -13,48 +13,41 @@
     <div class="content">
 
         {% include "partials/page-header.html" %}
-
+        {# https://bhrecicla.com.br/imagens/blogpost69.jpg #}
+        {# https://sitesustentavel.com.br/wp-content/uploads/2019/05/sh_reciclagem_698172910.jpg #}
+        {# https://www.banricoop.coop.br/uploads/blog/1562607238-como-contribuir-para-uma-reciclagem-mais-eficiente.png #}
         <main>
-            <h4>
-                <strong>02 pontos
+            {% if total > 0 %}
+                <h4>
+                    <strong>{{total}}</strong>
+                    pontos
                 </strong>
                 encontrados
             </h4>
             <div class="cards">
-                <div class="card">
-                    <img src="https://bhrecicla.com.br/imagens/blogpost69.jpg" alt="Colectoria">
-                    <h2>Colectoria</h2>
-                    <h3>resíduos eletrônicos, lâmpadas</h3>
-                    <p>
-                        Rio do Sul, Santa Catarina
-                        <br/>
-                        Odair Marques, Mariana<br/>
-                        N°: 260
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="https://www.banricoop.coop.br/uploads/blog/1562607238-como-contribuir-para-uma-reciclagem-mais-eficiente.png" alt="Colectoria">
-                    <h2>Colectoria</h2>
-                    <h3>resíduos eletrônicos, lâmpadas</h3>
-                    <p>
-                        Rio do Sul, Santa Catarina
-                        <br/>
-                        Odair Marques, Mariana<br/>
-                        N°: 260
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="https://sitesustentavel.com.br/wp-content/uploads/2019/05/sh_reciclagem_698172910.jpg" alt="Colectoria">
-                    <h2>Colectoria</h2>
-                    <h3>resíduos eletrônicos, lâmpadas</h3>
-                    <p>
-                        Rio do Sul, Santa Catarina
-                        <br/>
-                        Odair Marques, Mariana<br/>
-                        N°: 260
-                    </p>
-                </div>
-            </div>
+                {% for place in places %}
+                    <div class="card">
+                        <img src="{{place.logo}}" alt="{{place.name}}">
+                        <h2>{{place.name}}</h2>
+                        <h3>resíduos eletrônicos, lâmpadas</h3>
+                        <p>
+                            Tel:
+                            {{place.phone}}<br/>
+                            Email:
+                            {{place.email}}<br/>
+                            {{place.city}},
+                            {{place.state}}<br/>
+                            {{place.address}}<br/>
+                            {{place.address2}}
+                        </p>
+                    </div>
+                {% endfor %}
+            {%else %}
+                <h4>
+                    <strong>Nenhum</strong>
+                    local encontrados</h4>
+            {% endif %}
+
         </main>
     </div>
 {% endblock content %}

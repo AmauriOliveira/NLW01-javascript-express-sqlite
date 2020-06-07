@@ -34,7 +34,6 @@ function getCities(event) {
             }
             citySelect.disabled = false;
         })
-
 }
 
 document
@@ -71,6 +70,3 @@ function handleSelectedItem(event) {
     }
     colllectedItems.value = selectedItems;
 }
-
-
-
