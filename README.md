@@ -4,6 +4,7 @@
 Um projeto feito com **Node**, **Javascript**, **Nunjucks** e **Express** feito na Next Level Week #1 da **Rocketseat**.
 
 <br/>
+
 ![tela principal](https://i.imgur.com/8wiDlXB.png)
 
 ### Clone o repositorio
@@ -19,8 +20,11 @@ Um projeto feito com **Node**, **Javascript**, **Nunjucks** e **Express** feito 
 `npm start`
 
 <br/>
+
 ![tela de cadastro](https://i.imgur.com/5ruF2G0.png)
+
 <br/>
+
 ![tela de resultados](https://i.imgur.com/VLwtoLO.png)
 
 **Amauri Oliveira**
