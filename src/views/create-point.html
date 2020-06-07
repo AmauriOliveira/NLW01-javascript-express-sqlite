@@ -4,6 +4,7 @@
 
 {% block styles %}
     <link href="./styles/create-point.css" rel="stylesheet">
+    <link href="./styles/modal.css" rel="stylesheet">
 {% endblock styles %}
 
 {% block title %}
@@ -28,7 +29,7 @@
                     </div>
                     <div class="field">
                         <label for="name">Logo da entidade</label>
-                        <input type="url" name="image" required="required" placeholder="https://">
+                        <input type="url" name="logo" required="required" placeholder="https://">
                     </div>
                 </div>
                 <div class="field-group">
@@ -48,7 +49,7 @@
                     </div>
                     <div class="field">
                         <label for="number">Número/Complemento</label>
-                        <input type="text" name="number" required="required">
+                        <input type="text" name="address2" required="required">
                     </div>
                 </div>
                 <div class="field-group">
@@ -107,7 +108,9 @@
 </div>
 
 {% block modal %}
-{# implementar #}
+{% if saved %}
+    {% include "partials/point-created.html" %}
+{% endif %}
 {% endblock modal %}
 
 {% block scripts %}
