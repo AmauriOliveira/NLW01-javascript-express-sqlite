@@ -26,7 +26,7 @@
                     <div class="card">
                         <img src="{{place.logo}}" alt="{{place.name}}">
                         <h2>{{place.name}}</h2>
-                        <h3>{{place.items}}</h3>
+                        <h3>{{place.items.replace(',',', ')}}</h3>
                         <p>
                             Tel:
                             {{place.phone}}<br/>
