@@ -53,7 +53,7 @@ server.post("/savepoint", (request, response) => {
         city,
         items
     ];
-
+    
     db.run(query, values, afterInsertData);
 
     function afterInsertData(err) {

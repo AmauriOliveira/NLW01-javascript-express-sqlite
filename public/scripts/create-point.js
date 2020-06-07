@@ -47,7 +47,7 @@ for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem);
 }
 
-const colllectedItems = document.querySelector("input[nome=items]");
+const collectedItems = document.querySelector("input[name=items");
 
 let selectedItems = [];
 
@@ -59,14 +59,15 @@ function handleSelectedItem(event) {
 
     const alreadySelect = selectedItems.findIndex(item => item === itemId);
 
-    if (alreadySelect !== -1) {
+    if (alreadySelect != -1) {
         const filteredItems = selectedItems.filter(item => {
-            const itemIsDifferent = item !== itemId;
+            const itemIsDifferent = item != itemId;
             return itemIsDifferent;
         })
+
         selectedItems = filteredItems;
     } else {
         selectedItems.push(itemId);
     }
-    colllectedItems.value = selectedItems;
+    collectedItems.value = selectedItems;
 }
