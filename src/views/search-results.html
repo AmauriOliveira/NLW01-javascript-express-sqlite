@@ -1,65 +1,68 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
+{% extends "layout.html"%}}
+{% set pageId = "page-search-results" %}
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Resultado da pesquisa</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300;700&display=swap"
-            rel="stylesheet">
-        <link href="./styles/main.css" rel="stylesheet">
-        <link href="./styles/search-results.css" rel="stylesheet">
-        <link href="./styles/responsive.css" rel="stylesheet">
-    </head>
+{% block styles %}
+    <link href="./styles/search-results.css" rel="stylesheet">
+{% endblock styles %}
 
-    <body>
-        <div id="page-search-results">
-            <div class="content">
-                <header>
-                    <img src="/assets/logo.svg" alt="Logo Ecoleta">
-                    <a href="/">
-                        <span></span>
-                        Voltar para home</a>
-                </header>
-                <main>
-                    <h4>
-                        <strong>02 pontos </strong> encontrados
-                    </h4>
-                    <div class="cards">
-                        <div class="card">
-                            <img src="https://bhrecicla.com.br/imagens/blogpost69.jpg" alt="Colectoria">
-                            <h2>Colectoria</h2>
-                            <h3>resíduos eletrônicos, lâmpadas</h3>
-                            <p>
-                                Rio do Sul, Santa Catarina <br />
-                                Odair Marques, Mariana<br />
-                                N°: 260
-                            </p>
-                        </div>
-                        <div class="card">
-                            <img src="https://www.banricoop.coop.br/uploads/blog/1562607238-como-contribuir-para-uma-reciclagem-mais-eficiente.png" alt="Colectoria">
-                            <h2>Colectoria</h2>
-                            <h3>resíduos eletrônicos, lâmpadas</h3>
-                            <p>
-                                Rio do Sul, Santa Catarina <br />
-                                Odair Marques, Mariana<br />
-                                N°: 260
-                            </p>
-                        </div>
-                        <div class="card">
-                            <img src="https://sitesustentavel.com.br/wp-content/uploads/2019/05/sh_reciclagem_698172910.jpg" alt="Colectoria">
-                            <h2>Colectoria</h2>
-                            <h3>resíduos eletrônicos, lâmpadas</h3>
-                            <p>
-                                Rio do Sul, Santa Catarina <br />
-                                Odair Marques, Mariana<br />
-                                N°: 260
-                            </p>
-                        </div>
-                    </div>
-                </main>
+{% block title %}
+    <title>Resultado</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="content">
+
+        {% include "partials/page-header.html" %}
+
+        <main>
+            <h4>
+                <strong>02 pontos
+                </strong>
+                encontrados
+            </h4>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://bhrecicla.com.br/imagens/blogpost69.jpg" alt="Colectoria">
+                    <h2>Colectoria</h2>
+                    <h3>resíduos eletrônicos, lâmpadas</h3>
+                    <p>
+                        Rio do Sul, Santa Catarina
+                        <br/>
+                        Odair Marques, Mariana<br/>
+                        N°: 260
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="https://www.banricoop.coop.br/uploads/blog/1562607238-como-contribuir-para-uma-reciclagem-mais-eficiente.png" alt="Colectoria">
+                    <h2>Colectoria</h2>
+                    <h3>resíduos eletrônicos, lâmpadas</h3>
+                    <p>
+                        Rio do Sul, Santa Catarina
+                        <br/>
+                        Odair Marques, Mariana<br/>
+                        N°: 260
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="https://sitesustentavel.com.br/wp-content/uploads/2019/05/sh_reciclagem_698172910.jpg" alt="Colectoria">
+                    <h2>Colectoria</h2>
+                    <h3>resíduos eletrônicos, lâmpadas</h3>
+                    <p>
+                        Rio do Sul, Santa Catarina
+                        <br/>
+                        Odair Marques, Mariana<br/>
+                        N°: 260
+                    </p>
+                </div>
             </div>
-        </div>
-    </body>
+        </main>
+    </div>
+{% endblock content %}
 
-</html>
+{% block modal %}
+    {# implementar #}
+{% endblock modal %}
+
+{% block scripts %}
+    {# implementar #}
+{% endblock scripts %}

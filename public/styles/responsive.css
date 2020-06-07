@@ -24,10 +24,25 @@
     #page-search-results main .cards {
         grid-template-columns: 1fr 1fr;
     }
+    #page-create-point .field-group {
+        flex-direction: column;
+    }
+    #page-create-point .field-group .field+.field {
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 700px) {
+    #page-create-point form fieldset .itens-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media(max-width: 550px) {
     #page-search-results main .cards {
+        grid-template-columns: 1fr;
+    }
+    #page-create-point form fieldset .itens-grid {
         grid-template-columns: 1fr;
     }
 }
