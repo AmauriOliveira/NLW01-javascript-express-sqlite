@@ -1,0 +1,17 @@
+{
+  "name": "nextlevelweek01",
+  "version": "1.0.0",
+  "description": "projeto feito com a Rocketseat",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Rocketseat"
+  ],
+  "author": "Amauri Oliveira",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
